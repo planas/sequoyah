@@ -34,7 +34,7 @@ module Sequoyah
         [ key,
           value[:type],
           value[:db_type],
-          value[:ruby_default] || '-',
+          value[:ruby_default].nil? ? '-' : value[:ruby_default],
           value[:allow_null]  ? 'Y' : 'N',
           value[:primary_key] ? 'Y' : 'N',
           fks.include?(key)   ? 'Y' : 'N'
