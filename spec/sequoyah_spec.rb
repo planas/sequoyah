@@ -38,7 +38,7 @@ describe Sequoyah do
       # +-----------------------+-----------+------------------+---------+-------+-----+-----+
       OUTPUT
 
-      Sequoyah.schema_info(klass).should eq output
+      expect(Sequoyah.schema_info(klass)).to eq output
     end
   end
 end
